@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.codetribe.reportcardapp.Register">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@drawable/profile_image"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="35dp"/>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="#fff"
+       android:layout_below="@+id/profilepic"
+       android:layout_marginTop="35dp">
+
+       <EditText
+           android:id="@+id/fname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="9"
+           android:hint="First Name"
+           android:inputType="text"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp" />
+
+       <EditText
+           android:id="@+id/lname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:ems="9"
+           android:hint="Last Name"
+           android:inputType="text"
+           android:layout_marginTop="10dp"
+           android:layout_toRightOf="@+id/fname"
+           android:imeActionId="@+id/lname"
+           android:imeActionLabel="Last Name"/>
+
+       <EditText
+           android:id="@+id/email"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:ems="6"
+           android:hint="Email"
+           android:inputType="textEmailAddress"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_below="@+id/fname"/>
+
+       <EditText
+           android:id="@+id/password"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:ems="6"
+           android:hint="Password"
+           android:inputType="textPassword"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_below="@+id/email"/>
+
+       <EditText
+           android:id="@+id/number"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:ems="6"
+           android:hint="Cellphone Number"
+           android:inputType="text|phone"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_below="@+id/password"/>
+
+       <Button
+           android:id="@+id/submit"
+           android:layout_width="match_parent"
+           android:layout_height="70dp"
+           android:layout_alignParentBottom="true"
+           android:text="Get Started"
+           android:textColor="#fff"
+           android:textSize="20sp"
+           android:backgroundTint="#FF4081"
+           android:fontFamily="sans-serif-light"/>
+
+   </RelativeLayout>
+
+</RelativeLayout>

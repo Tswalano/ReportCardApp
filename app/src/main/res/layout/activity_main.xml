@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.codetribe.reportcardapp.MainActivity"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reportlogo"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/background_light"
+        android:background="#fff"
+        android:layout_below="@+id/logo"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/full_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name &amp; Surname"
+            android:fontFamily="sans-serif-bold"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/Subject1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="Subject 1"
+            android:layout_below="@+id/full_names"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/score1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="Sub1 Score"
+            android:layout_below="@+id/full_names"
+            android:layout_toRightOf="@+id/Subject1"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/Subject2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="Subject 2"
+            android:layout_below="@+id/Subject1"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/score2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="Sub2 Score"
+            android:layout_below="@+id/Subject1"
+            android:layout_toRightOf="@+id/Subject2"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/Subject3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="Subject 3"
+            android:layout_below="@+id/Subject2"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/score3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:hint="Sub3 Score"
+            android:layout_below="@+id/Subject2"
+            android:layout_toRightOf="@+id/Subject3"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:layout_below="@+id/Subject3"
+            android:layout_alignLeft="@+id/Subject3"
+            android:layout_alignStart="@+id/Subject3"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:layout_below="@+id/score3"
+            android:layout_alignRight="@+id/score3"
+            android:layout_alignEnd="@+id/score3"
+            android:layout_marginBottom="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
