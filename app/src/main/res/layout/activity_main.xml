@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,23 +7,51 @@
     tools:context="com.example.codetribe.reportcardapp.MainActivity"
     android:background="@drawable/bg">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/reportlogo"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+        android:id="@+id/parentRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:textSize="50dp"
+            android:text="Hello"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/myColorPrimary"
+            android:visibility="gone"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/logo"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/reportlogo"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"/>
 
     <RelativeLayout
+        android:id="@+id/parentPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/background_light"
         android:background="#fff"
         android:layout_below="@+id/logo"
-        android:layout_margin="10dp">
+        android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/full_names"
@@ -32,94 +60,182 @@
             android:text="Name &amp; Surname"
             android:fontFamily="sans-serif-bold"
             android:textSize="30sp"
+            android:textColor="@color/myColorPrimaryDark"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"/>
 
-        <EditText
-            android:id="@+id/Subject1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_below="@id/full_names"
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="8"
-            android:hint="Subject 1"
-            android:layout_below="@+id/full_names"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"/>
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/score1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="8"
-            android:hint="Sub1 Score"
-            android:layout_below="@+id/full_names"
-            android:layout_toRightOf="@+id/Subject1"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="10dp"/>
+            <EditText
+                android:id="@+id/Subject1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Subject 1"
+                android:text="English"
+                android:inputType="text"
+                android:enabled="false"
+                android:layout_below="@+id/full_names"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
 
-        <EditText
-            android:id="@+id/Subject2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="8"
-            android:hint="Subject 2"
-            android:layout_below="@+id/Subject1"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"/>
+            <EditText
+                android:id="@+id/score1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Sub1 Score"
+                android:inputType="text"
+                android:layout_below="@+id/full_names"
+                android:layout_toRightOf="@+id/Subject1"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"/>
 
-        <EditText
-            android:id="@+id/score2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="8"
-            android:hint="Sub2 Score"
-            android:layout_below="@+id/Subject1"
-            android:layout_toRightOf="@+id/Subject2"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="10dp"/>
+        </LinearLayout>
 
-        <EditText
-            android:id="@+id/Subject3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="8"
-            android:hint="Subject 3"
-            android:layout_below="@+id/Subject2"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="10dp"/>
+            android:orientation="horizontal"
+            android:layout_below="@id/linear1">
 
-        <EditText
-            android:id="@+id/score3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="8"
-            android:hint="Sub3 Score"
-            android:layout_below="@+id/Subject2"
-            android:layout_toRightOf="@+id/Subject3"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="10dp"/>
+            <EditText
+                android:id="@+id/Subject2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Subject 1"
+                android:text="Science"
+                android:inputType="text"
+                android:enabled="false"
+                android:layout_below="@+id/full_names"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/next"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Next"
-            android:layout_below="@+id/Subject3"
-            android:layout_alignLeft="@+id/Subject3"
-            android:layout_alignStart="@+id/Subject3"
-            android:layout_marginBottom="15dp"/>
+            <EditText
+                android:id="@+id/score2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Sub1 Score"
+                android:layout_below="@+id/full_names"
+                android:layout_toRightOf="@+id/Subject1"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"/>
 
-        <Button
-            android:id="@+id/prev"
-            android:layout_width="100dp"
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Previous"
-            android:layout_below="@+id/score3"
-            android:layout_alignRight="@+id/score3"
-            android:layout_alignEnd="@+id/score3"
-            android:layout_marginBottom="15dp"/>
+            android:orientation="horizontal"
+            android:layout_below="@id/linear2">
+
+            <EditText
+                android:id="@+id/Subject3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Subject 1"
+                android:text="Mathematics"
+                android:inputType="text"
+                android:enabled="false"
+                android:layout_below="@+id/full_names"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/score3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Sub1 Score"
+                android:layout_below="@+id/full_names"
+                android:layout_toRightOf="@+id/Subject1"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parentPanel"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:backgroundTint="#FF4081"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="#fff"
+            android:text="Previous"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF4081"
+            android:fontFamily="sans-serif-bold"
+            android:text="Next"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:backgroundTint="#FF4081"
+            android:fontFamily="sans-serif-bold"
+            android:textColor="#fff"
+            android:text="Update"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF4081"
+            android:fontFamily="sans-serif-bold"
+            android:text="Delete"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

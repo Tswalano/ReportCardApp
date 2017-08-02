@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">"Report Card App "</string>
+    <string name="app_name">"Report Card"</string>
+    <string name="reg_activity">"Student SignIn"</string>
+    <string name="main_activity">"Student Report"</string>
+    <string name="title_activity_students">Students</string>
+
+    <string-array name="course">
+        <item>Systems Development</item>
+        <item>Mobile Development</item>
+        <item>Systems Support</item>
+        <item>Science</item>
+        <item>Engineering</item>
+    </string-array>
 </resources>
+
